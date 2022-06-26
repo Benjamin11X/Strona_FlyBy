@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/navbar.js" defer></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+    <div class="navigationBar flex">
+        <div class="navigationBar__logo">
+            <img class="navigationBar__logo-image" src="/assets/img/Logo/LogoFlyByLight.svg" alt="Logo FlyBy">
+        </div>
+
+        <button class="navigation__toggle" aria-controls="navigation__list" aria-expanded="false"></button>
+
+        <nav class="navigation">
+            <ul id="navigation__list" data-visible="false" class="navigation__list flex">
+                <li class="navigation__list-item">
+                    <a href="index.html" class="navigation__list-item-link">
+                        Strona Główna
+                    </a>
+                </li>
+                <li class="navigation__list-item">
+                    <a href="flota.html" class="navigation__list-item-link">
+                        Flota
+                    </a>
+                </li>
+                <li class="navigation__list-item">
+                    <a href="obsluga.html" class="navigation__list-item-link">
+                        Obsługa
+                    </a>
+                </li>
+                <li class="navigation__list-item" >
+                    <a href="kontakt.html" class="navigation__list-item-link">
+                        Kontakt
+                    </a>
+                </li>
+                <li class="navigation__list-item" >
+                    <a href="test.html" class="navigation__list-item-link">
+                        Test
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <section class="section section0">
+        <div class="section0__quote">
+            <h2>Niebo to nie limit</h2>
+            <p>Nasza firma od lat zajmuje się spełnianiem największych potrzeb każdego klienta, gdzie niezależnie od potrzeb stajemy na wysokości zadania</p>
+        </div>
+        <div></div>
+    </section>
+    <section class="section section1">
+        <h1>Historia Firmy</h1>
+        <div class="swiper mySwiper0">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <h2>1989</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, minus.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <h2>1995</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, minus.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <h2>2001</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, minus.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <h2>2008</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, minus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- === SECTION 2 === -->
+    <section class="section section2 flex">
+        <div class="section2__header">
+            <h2>Stan aktualny</h2>
+            <h1>2022</h1>
+        </div>
+        <div class="section2__content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere pariatur magni sequi aliquam sed odio iure atque inventore voluptate, iusto maiores, tempora vero. Doloremque esse, molestiae animi distinctio recusandae, amet perspiciatis perferendis aliquid a quod voluptate, eligendi voluptatem non illum? Quia saepe explicabo sint animi id dolor dolorem quas doloremque!</p>
+        </div>
+    </section>
+    <!-- === SECTION 3 === -->
+    <section class="section section3">
+        <div class="infoTab mirror">
+            <div class="infoTab__round">
+                <img src="/assets/img/OwnedPlane.svg" alt="">
+            </div>
+            <div class="infoTab__square">
+                <h1>Może coś na właśność?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus fuga itaque corporis! Id tempora in, deleniti eaque nobis harum pariatur!</p>
+            </div>
+        </div>
+        <div class="infoTab">
+            <div class="infoTab__round">
+                <img src="/assets/img/rent.svg" alt="">
+            </div>
+            <div class="infoTab__square">
+                <h1>Na każdą kieszeń i okazje</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus fuga itaque corporis! Id tempora in, deleniti eaque nobis harum pariatur!</p>
+            </div>
+        </div>
+        <div class="infoTab mirror">
+            <div class="infoTab__round">
+                <img src="/assets/img/longTermRent.svg" alt="" style="height: 65%; width: 65%">
+            </div>
+            <div class="infoTab__square">
+                <h1>Owocna współpraca</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus fuga itaque corporis! Id tempora in, deleniti eaque nobis harum pariatur!</p>
+            </div>
+        </div>
+        <div class="infoTab">
+            <div class="infoTab__round">
+                <img src="/assets/img/Rocket.svg" alt="" style="height: 65%; width: 65%">
+            </div>
+            <div class="infoTab__square">
+                <h1>To the moon</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus fuga itaque corporis! Id tempora in, deleniti eaque nobis harum pariatur!</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <h1>Najwazniejsze informacje</h1>
+        <div class="footer__content">
+            <ul>
+                <li class="footer__list-header">MENU</li>
+                <li><a href="">Oferty Specjalne</a></li>
+                <li><a href="">Dlaczego my</a></li>
+                <li><a href="">Oferta</a></li>
+            </ul>
+            <ul>
+                <li class="footer__list-header">DOKUMENTY</li>
+                <li><a href="">Kariera</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Regulamin</a></li>
+                <li><a href="">Polityka prywatności</a></li>
+                <li><a href="">Kontakt</a></li>
+            </ul>
+            <ul>
+                <li class="footer__list-header">PŁATNOŚCI</li>
+                <li><a href="">Blik</a></li>
+                <li><a href="">Przelewy24</a></li>
+                <li><a href="">Paypal</a></li>
+                <li><a href="">Dotpay</a></li>
+                <li><a href="">Skrill</a></li>
+            </ul>
+            <ul>
+                <li class="footer__list-header">
+                    SOCIAL MEDIA
+                </li>
+                <li>
+                    <a href="">Facebook</a>
+                </li>
+                <li>
+                    <a href="">Instagram</a>
+                </li>
+                <li>
+                    <a href="">Twitter</a>
+                </li>
+                <li>
+                    <a href="">TikTok</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="footer__list-header">MIASTA</li>
+                <li><a href="">Warszawa</a></li>
+                <li><a href="">Kraków</a></li>
+                <li><a href="">Gdańsk</a></li>
+                <li><a href="">Szczecin</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- === SCRIPTS === -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/assets/js/swiper0.js"></script>
+</body>
+</html>
