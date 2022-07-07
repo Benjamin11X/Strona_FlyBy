@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+$whiteTextColor: #e9ecef;
 $primaryBackground: #7a7a7a;
 $primaryBackgroundSc: #8a8989;
 
@@ -19,6 +21,107 @@ body{
 }
 
 /* === GLOBAL CLASSES === */
+.slider{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row-reverse;
+    &__track-container{
+        height: 100%;
+        width: 85%;
+        overflow: hidden;
+    }
+
+    &__track{
+        list-style: none;
+        height: 100%;
+        position: relative;
+        transition: 1s ;
+    }
+
+    &__slide{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__slide-content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__navigation{
+        width: 15%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+    &__indicator{
+        cursor: pointer;
+        border: 0;
+        border-radius: 15px;
+        width: 4rem;
+        height: 1.5rem;
+        background-color: #000000;
+        color: $whiteTextColor;
+        transition: .5s ease;
+    }
+
+    &__indicator:hover{
+        background-color: #191919;
+    }
+
+    &__indicator.current-slide{
+        background-color: $whiteTextColor;
+        color: #000000;
+    }
+}
+
+/* === FOOTER === */
+.footer{
+    background-color: #000000;
+    height: auto;
+    color: #ffffff;
+    text-align: center;
+    padding: .5rem 0 2rem 0;
+    &__content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        ul{
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            align-items: center;
+            padding: 0 0 2rem 0;
+            width: 280px;
+            li{
+                padding: .5rem 0 0 0;
+                a{
+                    text-decoration: none;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    h1{
+        padding: .5rem 0 2rem 0;
+    }
+    &__list-header{
+        font-weight: bold;
+    }
+}
+
+
 .bold{
     font-weight: bold;
 }
@@ -206,9 +309,27 @@ body{
     }
     &__list-item-link{
         text-decoration: none;
-        color: rgb(233, 236, 239);
+        color: $whiteTextColor;
         font-weight: 400;
+        position: relative;
     }
+    &__list-item-link:after{
+        content: "";
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        display: block;
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        background: $whiteTextColor;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+    &__list-item-link:hover:after{
+        width: 100%;
+        left: 0;
+    }
+
     &__toggle{
         display: none;
     }
@@ -219,7 +340,6 @@ body{
         &__list{
             position: fixed;
             inset: 0 0 0 30%;
-            background-color: hsla(0, 0%, 0%, 0.25);
             flex-direction: column;
             gap: 2em;
             padding: Min(30vh, 10rem) 2em;
@@ -263,14 +383,22 @@ body{
     }
 }
 
+
 /* ========= INDEX.HTML ========= */
 
 /* === SECTION 0 === */
 .section0{
-    background-image: url(/assets/img/mainBackground.jpg);
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+    ),
+    url(/assets/img/mainBackground.jpg);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
     &__quote{
         height: calc(110vh - 96px);
         width: 100%;
@@ -278,6 +406,7 @@ body{
         flex-direction: column;
         justify-content: center;
         padding: 0 4rem;
+        color: $whiteTextColor;
         h2{
             width: 50%;
             font-size: 4rem;
@@ -324,7 +453,18 @@ body{
 
 /* === SECTION 2 === */
 .section2{
-    background-color: #BEE9E8;
+    background:
+    linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+    ),
+    url("/assets/img/ActualConditionBackground.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: aliceblue;
+
     &__header{
         width: 25%;
         height: 100%;
@@ -353,42 +493,6 @@ body{
     justify-content: space-evenly;
     align-items: center;
     padding: 5rem 0;
-}
-
-/* === FOOTER === */
-.footer{
-    background-color: #000000;
-    height: auto;
-    color: #ffffff;
-    text-align: center;
-    padding: .5rem 0 2rem 0;
-    &__content{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        ul{
-            display: flex;
-            flex-direction: column;
-            list-style: none;
-            align-items: center;
-            padding: 0 0 2rem 0;
-            width: 280px;
-            li{
-                padding: .5rem 0 0 0;
-                a{
-                    text-decoration: none;
-                    color: #ffffff;
-                }
-            }
-        }
-    }
-    h1{
-        padding: .5rem 0 2rem 0;
-    }
-    &__list-header{
-        font-weight: bold;
-    }
 }
 
 /* ========= FLOTA.HTML ========= */
@@ -488,15 +592,6 @@ body{
             align-items: center;
         }
     }
-}
-
-/* ========== TEST.HTML ========= */ 
-.testSection0{
-    background-color: #62B6CB;
-}
-
-.testSection1{
-    background-color: #CAE9FF;
 }
 
 @media (max-width: 992px){
@@ -693,3 +788,37 @@ body{
         }
     }
 }
+
+/* ========== TEST.HTML ========= */ 
+.testSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testSection:nth-child(1){
+    background-image: url("/assets/img/mainBackground.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.testSection:nth-child(2){
+    background-color: #CAE9FF;
+}
+
+.testSection:nth-child(3){
+    background-image: url("/assets/img/mainBackgroundMobile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    background-attachment: fixed;
+}
+
+.testSection:nth-child(4){
+    background-color: #CAE9FF;
+}
+
+
+

@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="/assets/js/navbar.js" defer></script>
+    <script src="/assets/js/parallax.js" defer></script>
+    <script src="/assets/js/slider.js" defer></script>
     <title>FlyBy - Test</title>
 </head>
 <body>
     <!-- NAVIGATION BAR -->
     <div class="navigationBar flex">
         <div class="navigationBar__logo">
-            <img class="navigationBar__logo-image" src="/assets/img/Logo/LogoFlyByDark.svg" alt="Logo FlyBy">
+            <img class="navigationBar__logo-image" src="/assets/img/Logo/LogoFlyByLight.svg" alt="Logo FlyBy">
         </div>
 
         <button class="navigation__toggle" aria-controls="navigation__list" aria-expanded="false"></button>
@@ -45,13 +47,62 @@
             </ul>
         </nav>
     </div>
-    <!-- SECTION 0 -->
-    <section class="section testSection0">
-    </section>
-
-    <!-- SECTION 1 -->
-    <section class="section testSection1">
-
-    </section>
+    
+    <div class="sections">
+        <!-- SECTION 0 -->
+        <section class="section testSection testSection0" id="parallax">
+            <h2>SECTION 0</h2>
+        </section>
+    
+        <!-- SECTION 1 -->
+        <section class="section testSection testSection1">
+            <div class="slider">
+                <div class="slider__track-container">
+                    <ul class="slider__track">
+                        <li class="slider__slide current-slide">
+                            <div class="slider__slide-content">
+                                <h1>Lorem, ipsum. 1</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis error delectus nisi quidem modi necessitatibus ratione reiciendis quisquam porro totam!</p>
+                            </div>
+                        </li>
+                        <li class="slider__slide">
+                            <div class="slider__slide-content">
+                                <h1>Lorem, ipsum. 2</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis error delectus nisi quidem modi necessitatibus ratione reiciendis quisquam porro totam!</p>
+                            </div>
+                        </li>
+                        <li class="slider__slide">
+                            <div class="slider__slide-content">
+                                <h1>Lorem, ipsum. 3</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis error delectus nisi quidem modi necessitatibus ratione reiciendis quisquam porro totam!</p>
+                            </div>
+                        </li>
+                        <li class="slider__slide">
+                            <div class="slider__slide-content">
+                                <h1>Lorem, ipsum. 4</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis error delectus nisi quidem modi necessitatibus ratione reiciendis quisquam porro totam!</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="slider__navigation">
+                    <button class="slider__indicator current-slide">1989</button>
+                    <button class="slider__indicator">1995</button>
+                    <button class="slider__indicator">2002</button>
+                    <button class="slider__indicator">2010</button>
+                </div>
+            </div>
+        </section>
+    
+         <!-- SECTION 2 -->
+         <section class="section testSection testSection2">
+            <h2>SECTION 2</h2>
+        </section>
+    
+         <!-- SECTION 3 -->
+         <section class="section testSection testSection3">
+            <h2>SECTION 3</h2>
+        </section>
+    </div>
 </body>
 </html>
